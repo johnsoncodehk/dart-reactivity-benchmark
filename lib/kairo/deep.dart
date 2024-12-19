@@ -32,6 +32,7 @@ void Function() deepPropagation(ReactiveFramework framework) {
         framework.withBatch(() {
           head.write(i);
         });
+        assert(callCounter.count == i + 1);
         assert(current.read() == len + i);
       }
     };
